@@ -85,8 +85,8 @@ Of course the script is ready to accept any other log file in the same format.
   
   <strong>SOLUTION</strong>
      The output I have obtained processing the data and formatting it has been this:
-     
-     [Solution.](https://github.com/rafahg/Ruby-app-Backend/blob/media/media/Result_web_log.png)
+     [My solution](https://github.com/rafahg/Ruby-app-Backend/blob/media/media/Result_web_log.png)
+    
 
 ### Next implementations.
 
