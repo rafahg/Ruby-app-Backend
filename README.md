@@ -68,6 +68,10 @@ Of course the script is ready to accept any other log file in the same format.
 
 - All the code has been tested with 100% coverage and the tests can be viewed in the /spec folder of the project.
 
+- As a bonus I have added a .travis.yml file to have a CI pipeline for the pullrequest and the passing test suites with rspec.
+
+- Version control. All of the implementations have been made in separate branches which have been merged just only when all the test were passing and the code was stable. As stated in the point above,  a pipeline using Travis CI has been added to control the pull request and the merges.
+
  <strong>How Code is organised</strong>
 
  The code is divided into 3 different classes.
