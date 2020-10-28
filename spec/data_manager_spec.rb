@@ -32,5 +32,13 @@ describe DataManager do
       a.single_webs
       expect(a.webs.length).to eq 6
     end
+    it '#multi_counter returns correct data' do
+      a = DataManager.new('webserver.log')
+      a.organize_data_in_pairs
+      expect(a.data_pairs.length).to eq 500
+      a.single_webs
+      expect(a.multi_counter).to eq a.multi_visits
+      expect(a.multi_visits.length).to eq 6
+    end
   end
 end
