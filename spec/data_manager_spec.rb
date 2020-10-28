@@ -40,7 +40,7 @@ describe DataManager do
       expect(a.multi_counter).to eq a.multi_visits
       expect(a.multi_visits.length).to eq 6
     end
-    it '#single_counter returns correct data' do
+    it '#single_counter and #unique_visits works and return correct data' do
       a = DataManager.new('webserver.log')
       a.organize_data_in_pairs
       a.unique_visits
