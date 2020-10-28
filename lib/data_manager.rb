@@ -25,13 +25,13 @@ class DataManager
 
   def multi_counter
     temp = []
-    data_pairs.each {|pair| temp.push(pair[0])}
-    temp.each { |web| multi_visits.push([temp.count(web), web])}
+    data_pairs.each { |pair| temp.push(pair[0]) }
+    temp.each { |web| multi_visits.push([temp.count(web), web]) }
     return multi_visits.uniq!
   end
 
   def unique_visits
-    data_pairs.uniq.each { |pair| uniq_pairs.push(pair[0])}
+    data_pairs.uniq.each { |pair| uniq_pairs.push(pair[0]) }
   end
 
   def single_counter
@@ -39,9 +39,12 @@ class DataManager
     single_visits.uniq!.sort.reverse
   end
 
+  def multi_data
+    organize_data_in_pairs
+    single_webs
+    multi_counter
+    unique_visits
+    single_counter
+  end
 
-  a = DataManager.new('webserver.log')
-  a.organize_data_in_pairs
-  a.single_webs
-  p a.webs
 end

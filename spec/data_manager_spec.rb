@@ -49,5 +49,15 @@ describe DataManager do
       expect(a.unique_visits.length).to eq 135
       expect(a.single_visits.length).to eq 6
     end
+    it '#multi_data execute methods correctly and provides with the data' do
+      a = DataManager.new('webserver.log')
+      a.multi_data
+      expect(a.webs.length).to eq 6
+      expect(a.single_visits.length).to eq 6
+      expect(a.multi_visits.length).to eq 6
+      expect(a.data_pairs[0].length).to eq 2
+      expect(a.single_visits[5][0]).to eq 21
+      expect(a.single_visits[3][1]).to eq '/about/2'
+    end
   end
 end
