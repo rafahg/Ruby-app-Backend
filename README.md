@@ -76,6 +76,8 @@ Of course the script is ready to accept any other log file in the same format.
   - PrintData is the class in charge of displaying the data for the script user.
 
   Every class has been coded in a separate file in the lib folder and has its testing suite in the spec folder.
+  
+  And Rspec Helper has been added, to run SimpleCov gem, which displayed the % of test coverage. Which, in this case, is the 100%.
 
 ### Next implementations.
 
