@@ -7,4 +7,10 @@ describe DataManager do
       managed_data.data == @data
     end
   end
+  context "Class Methods" do
+    it '#organize_data_in_pairs returns @data_pairs with correct length' do
+      a = DataManager.new('webserver.log')
+      expect(a.organize_data_in_pairs.length).to eq 500
+    end
+  end
 end
