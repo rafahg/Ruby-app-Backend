@@ -11,7 +11,6 @@ class PrintData
   end
 
   def list_multi_views
-    puts " "
     puts "               File log App. V.1.0.0"
     puts "               Greetings, Professor Falken."
     puts "_______________________________________________________"
