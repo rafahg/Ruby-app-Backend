@@ -39,11 +39,11 @@ Once you have Ruby 2.7.1 in your system :
   To install the ruby gems and dependencies.
 
    To run the test :
-
-    ```
-    $ rspec
-    ```
-  
+   
+  ```
+  $ rspec
+  ```
+    
   To run the script and obtain the result in the CLI, just run in the root:
   
    - Giving permissions to the file, to make it executable.
