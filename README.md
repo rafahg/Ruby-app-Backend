@@ -81,11 +81,13 @@ Of course the script is ready to accept any other log file in the same format.
 
   Every class has been coded in a separate file in the lib folder and has its testing suite in the spec folder.
   
-  And Rspec Helper has been added, to run SimpleCov gem, which displayed the % of test coverage. Which, in this case, is the 100%.
+  And Rspec Helper has been added, to run SimpleCov gem, which displayed the % of test coverage. Which, in this case, is the 100%. (Classes and methods, however, script is not tested).
 
 ### Next implementations.
 
-The project needs more testing, so to create testing edge cases is needed.
+The project needs more testing, testing edge cases are needed next.
+
+The file containing the script is the only one which is not tested, I did not find the way to do it. I have to research more about testing ARGV.
 
  A nice and easy new functionality would be to add geolocation to the IP so it would be possible to see the country and city of the visitors.
 
