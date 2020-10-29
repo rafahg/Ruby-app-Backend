@@ -62,9 +62,9 @@ Of course the script is ready to accept any other log file in the same format.
 
  - The project has been done using a strong OOP approach, so I have intended to create a class for a separate task, the intention, to create code more maintainable and easy to test.
 
- - The approach I have taken when creating the methods has been the single responsibility and as simple as possible. In other words, one method, one task.
+ - The approach I have taken when creating the methods has been the single responsibility and keep the methods as simple as possible. In other words, one method, one task.
 
- - The I have tried to encapsulate the classes the best way possible, so the class which at the end manage the data receives all the objects with all the data already prepared.
+ - Then I have tried to encapsulate the classes the best way possible, so the class which at the end manage the data receives all the objects with all the data already prepared.
 
 - All the code has been tested with 100% coverage and the tests can be viewed in the /spec folder of the project.
 
