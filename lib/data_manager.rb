@@ -1,16 +1,22 @@
 require './lib/file_manager.rb'
+require './lib/geo_location.rb'
 
 class DataManager
-  attr_reader :data, :data_pairs, :webs, :multi_visits, :single_visits, :uniq_pairs
-
+  attr_reader :data, :data_pairs, :webs, :multi_visits, :single_visits, :uniq_pairs, :location, :ips,
+ :countries, :contries_count
+  
   def initialize(log)
+    @location = LocateIp.new
     @data = FileManager.new(log)
     @data_pairs = []
     @uniq_pairs = []
     @webs = []
+    @ips = []
     @multi_visits = []
     @single_visits = []
-  end
+    @countries = []
+    @countries_count = []
+    end
 
   def organize_data_in_pairs
     data.file_data.map { |pair| data_pairs.push([pair]) }
@@ -21,6 +27,21 @@ class DataManager
     data_pairs.each do |web|
       webs.push(web[0]).uniq!    
     end
+  end
+
+  def single_ips
+    data_pairs.each do |ip|
+      ips.push(ip[1]).uniq!
+    end
+  end
+
+  def countries_visit_count
+    ips.each do |ip|
+     @countries.push(location.country_location(ip))
+    end
+   # @countries.each do |country|
+   # @contries_count.push([country, @countries.count(country)])
+   # end
   end
 
   def multi_counter
@@ -42,6 +63,8 @@ class DataManager
   def multi_data
     organize_data_in_pairs
     single_webs
+    single_ips
+    countries
     multi_counter
     unique_visits
     single_counter
