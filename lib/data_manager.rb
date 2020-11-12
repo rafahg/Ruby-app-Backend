@@ -2,7 +2,7 @@ require './lib/file_manager.rb'
 
 class DataManager
   attr_reader :data, :data_pairs, :webs, :multi_visits, :single_visits, :uniq_pairs, :single_visits_alphabetical,
-  :multi_visits_alphabetical
+              :multi_visits_alphabetical
 
   def initialize(log)
     @data = FileManager.new(log)
@@ -53,19 +53,18 @@ class DataManager
   end
 
   def single_visits_alphabetically
-     single_visits.each do |pair|
-        single_visits_alphabetical.push(pair.reverse)
-     end
-     single_visits_alphabetical.sort!
+    single_visits.each do |pair|
+      single_visits_alphabetical.push(pair.reverse)
+    end
+    single_visits_alphabetical.sort!
   end
 
   def multi_visits_alphabetically
     multi_visits.each do |pair|
       multi_visits_alphabetical.push(pair.reverse)
     end
-      multi_visits_alphabetical.sort!
+    multi_visits_alphabetical.sort!
       
   end
-
 
 end

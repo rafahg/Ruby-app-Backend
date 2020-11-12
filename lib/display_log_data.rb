@@ -1,14 +1,14 @@
 require './lib/data_manager.rb'
 
-class PrintData
+class PrintData 
   attr_accessor :data, :datas, :webs, :single_visits, :multi_visits,
-  :multi_visits_alphabetical, :single_visits_alphabetical
+                :multi_visits_alphabetical, :single_visits_alphabetical
   
   def initialize(log)
     @data = DataManager.new(log)
     @datas = data.multi_data
     @webs = data.webs
-    @single_visits = data.single_visits
+    @single_visits = data.single_visits.sort.reverse
     @multi_visits = data.multi_visits.sort.reverse
     @single_visits_alphabetical = data.single_visits_alphabetical
     @multi_visits_alphabetical = data.multi_visits_alphabetical
