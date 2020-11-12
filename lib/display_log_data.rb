@@ -38,4 +38,26 @@ class PrintData
     end
   end
 
+  def list_single_views_alphabetically
+    puts "________________________________________________________________"
+    puts " "
+    puts "List of Webs and number of single visits, in Alphabetical order."
+    puts "________________________________________________________________"
+    puts " "
+    single_visits_alphabetical.each do |pair|
+      puts "          web: #{pair[0].ljust(14)} Unique views: #{pair[1]}"
+    end
+  end
+
+  def list_multi_views_alphabetically
+    puts "__________________________________________________________"
+    puts " "
+    puts "List of Webs and number of visits, in Alphabetical order."
+    puts "__________________________________________________________"
+    puts " "
+    multi_visits_alphabetical.each do |pair|
+      puts "          web: #{pair[0].ljust(14)} visits: #{pair[1]}"
+    end
+  end
+
 end

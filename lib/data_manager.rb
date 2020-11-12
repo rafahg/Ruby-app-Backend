@@ -25,9 +25,6 @@ class DataManager
     multi_visits_alphabetically
   end
 
-  private
-
-
   def organize_data_in_pairs
     data.file_data.map { |pair| data_pairs.push([pair]) }
     data_pairs.map! { |pair| pair[0].split(" ") }
