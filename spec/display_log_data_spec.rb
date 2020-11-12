@@ -19,5 +19,16 @@ describe PrintData do
       expect { a.list_single_views }.to output.to_stdout
       expect { a.list_single_views }.to_not output.to_stderr
     end
+    it '#list_single_views_alphabetically displays correcly' do
+      a = PrintData.new('webserver.log')
+      expect { a.list_single_views_alphabetically }.to output.to_stdout
+      expect { a.list_single_views_alphabetically }.to_not output.to_stderr
+    end
+
+    it '#list_single_views displays correcly' do
+      a = PrintData.new('webserver.log')
+      expect { a.list_multi_views_alphabetically }.to output.to_stdout
+      expect { a.list_multi_views_alphabetically }.to_not output.to_stderr
+    end
   end
 end
